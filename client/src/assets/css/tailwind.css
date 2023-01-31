@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply overflow-x-hidden;
+		@apply bg-zinc-800 text-white antialiased;
+	}
+}
+
+@layer utilities {
+	.min-h-app {
+		min-height: calc(100vh - 4rem);
+	}
+
+	.link {
+		@apply rounded p-2 text-sm transition-colors hover:bg-gray-100;
+	}
+
+	.link-active {
+		@apply bg-gray-100;
+	}
+}
