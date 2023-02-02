@@ -12,7 +12,7 @@ import { ArrowSmallRightIcon } from '@heroicons/vue/24/solid'
 					<p class="mt-2 text-lg">Do you wan't to host a tournament?</p>
 					<router-link
 						to="/streamer"
-						class="transtiion-all mt-8 inline-flex items-center justify-between gap-6 rounded border border-white/50 px-4 py-2 font-sans text-lg duration-300 hover:border-black hover:bg-white hover:font-semibold hover:text-black hover:shadow-lg"
+						class="transtiion-all mt-8 inline-flex items-center justify-between gap-6 rounded border border-white/50 px-4 py-2 font-sans text-lg duration-300 hover:border-white hover:bg-white hover:font-semibold hover:text-black hover:shadow-lg"
 					>
 						Become Streamer
 						<ArrowSmallRightIcon class="h-5 w-5" />
@@ -28,7 +28,7 @@ import { ArrowSmallRightIcon } from '@heroicons/vue/24/solid'
 					<p class="mt-2 text-lg">Let's fight for glory and fine prices!</p>
 					<router-link
 						to="/tournaments"
-						class="transtiion-all mt-8 inline-flex items-center justify-between gap-6 rounded border border-white/50 px-4 py-2 font-sans text-lg duration-300 hover:border-black hover:bg-white hover:font-semibold hover:text-black hover:shadow-lg"
+						class="transtiion-all mt-8 inline-flex items-center justify-between gap-6 rounded border border-white/50 px-4 py-2 font-sans text-lg duration-300 hover:border-white hover:bg-white hover:font-semibold hover:text-black hover:shadow-lg"
 					>
 						View Tournaments
 						<ArrowSmallRightIcon class="h-5 w-5" />
@@ -44,7 +44,7 @@ import { ArrowSmallRightIcon } from '@heroicons/vue/24/solid'
 					<p class="mt-2 text-lg">How do i become a fears warrior?</p>
 					<router-link
 						to="/about"
-						class="transtiion-all mt-8 inline-flex items-center justify-between gap-6 rounded border border-white/50 px-4 py-2 font-sans text-lg duration-300 hover:border-black hover:bg-white hover:font-semibold hover:text-black hover:shadow-lg"
+						class="transtiion-all mt-8 inline-flex items-center justify-between gap-6 rounded border border-white/50 px-4 py-2 font-sans text-lg duration-300 hover:border-white hover:bg-white hover:font-semibold hover:text-black hover:shadow-lg"
 					>
 						Read More
 						<ArrowSmallRightIcon class="h-5 w-5" />
