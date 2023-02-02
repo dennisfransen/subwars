@@ -24,6 +24,16 @@ const router = createRouter({
 			component: () => import('@/views/RegisterView.vue'),
 		},
 		{
+			path: '/streamer',
+			name: 'streamer',
+			component: () => import('@/views/StreamerView.vue'),
+		},
+		{
+			path: '/tournaments',
+			name: 'tournaments',
+			component: () => import('@/views/TournamentsView.vue'),
+		},
+		{
 			path: '/:pathMatch(.*)*',
 			name: 'not-found',
 			component: () => import('@/views/NotFoundView.vue'),
