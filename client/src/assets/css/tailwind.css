@@ -4,7 +4,7 @@
 
 @layer base {
 	body {
-		@apply overflow-x-hidden;
+		@apply overflow-x-hidden font-inter;
 		@apply bg-zinc-800 text-white antialiased;
 	}
 }

@@ -2,7 +2,7 @@
 	<header class="inset-x-0 top-0 z-50 hidden bg-zinc-900 shadow md:block">
 		<div class="container mx-auto flex min-h-16 items-center justify-between px-4">
 			<div class="flex items-center gap-16">
-				<h1 class="text-lg font-bold">
+				<h1 class="font-graduate text-lg font-bold uppercase">
 					<router-link to="/">Subwars</router-link>
 				</h1>
 
