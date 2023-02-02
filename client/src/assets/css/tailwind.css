@@ -15,10 +15,10 @@
 	}
 
 	.link {
-		@apply rounded p-2 text-sm transition-colors hover:bg-gray-100;
+		@apply rounded p-2 text-sm transition-colors duration-300 hover:bg-gray-600;
 	}
 
 	.link-active {
-		@apply bg-gray-100;
+		@apply bg-gray-700;
 	}
 }
