@@ -5,7 +5,7 @@ import { ArrowSmallRightIcon } from '@heroicons/vue/24/solid'
 <template>
 	<main class="grid lg:grid-cols-3">
 		<div class="img-container group/img">
-			<div class="img bg-anubis"></div>
+			<div class="img bg-streaming"></div>
 			<div class="img-inner">
 				<div>
 					<h2 class="font-graduate text-5xl font-bold uppercase tracking-wide">Streamer</h2>
@@ -21,7 +21,7 @@ import { ArrowSmallRightIcon } from '@heroicons/vue/24/solid'
 			</div>
 		</div>
 		<div class="img-container group/img">
-			<div class="img bg-inferno"></div>
+			<div class="img bg-crowd"></div>
 			<div class="img-inner">
 				<div>
 					<h2 class="font-graduate text-5xl font-bold uppercase tracking-wide">Tournaments</h2>
@@ -37,7 +37,7 @@ import { ArrowSmallRightIcon } from '@heroicons/vue/24/solid'
 			</div>
 		</div>
 		<div class="img-container group/img">
-			<div class="img bg-mirage"></div>
+			<div class="img bg-keyboard"></div>
 			<div class="img-inner">
 				<div>
 					<h2 class="font-graduate text-5xl font-bold uppercase tracking-wide">About</h2>

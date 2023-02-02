@@ -10,6 +10,9 @@ module.exports = {
 				mirage: "url('@/assets/images/mirage.webp')",
 				anubis: "url('@/assets/images/anubis-1.webp')",
 				inferno: "url('@/assets/images/inferno.webp')",
+				crowd: "url('@/assets/images/crowd.jpg')",
+				streaming: "url('@/assets/images/streaming.jpg')",
+				keyboard: "url('@/assets/images/keyboard.jpg')",
 			},
 			fontFamily: {
 				graduate: 'Graduate, cursive',
