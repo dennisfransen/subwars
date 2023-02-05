@@ -6,11 +6,31 @@
 					<router-link to="/">Subwars</router-link>
 				</h1>
 
-				<nav class="space-x-10">
-					<router-link to="/" class="text-sm">Home</router-link>
-					<router-link to="/streamer" class="text-sm">Streamer</router-link>
-					<router-link to="/tournaments" class="text-sm">Tournaments</router-link>
-					<router-link to="/about" class="text-sm">About</router-link>
+				<nav class="flex items-center gap-10">
+					<router-link
+						to="/"
+						class="relative block overflow-x-hidden text-sm text-gray-400 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:translate-x-full after:transform after:bg-gray-400 after:transition-transform after:duration-300"
+						active-class="after:translate-x-0 text-white"
+						>Home</router-link
+					>
+					<router-link
+						to="/streamer"
+						class="relative block overflow-x-hidden text-sm text-gray-400 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:translate-x-full after:transform after:bg-gray-400 after:transition-transform after:duration-300"
+						active-class="after:translate-x-0 text-white"
+						>Streamer</router-link
+					>
+					<router-link
+						to="/tournaments"
+						class="relative block overflow-x-hidden text-sm text-gray-400 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:translate-x-full after:transform after:bg-gray-400 after:transition-transform after:duration-300"
+						active-class="after:translate-x-0 text-white"
+						>Tournaments</router-link
+					>
+					<router-link
+						to="/about"
+						class="relative block overflow-x-hidden text-sm text-gray-400 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:translate-x-full after:transform after:bg-gray-400 after:transition-transform after:duration-300"
+						active-class="after:translate-x-0 text-white"
+						>About</router-link
+					>
 				</nav>
 			</div>
 
