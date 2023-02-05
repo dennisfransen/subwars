@@ -13,6 +13,8 @@ module.exports = {
 				crowd: "url('@/assets/images/crowd.jpg')",
 				streaming: "url('@/assets/images/streaming.jpg')",
 				keyboard: "url('@/assets/images/keyboard.jpg')",
+				smoking: "url('@/assets/images/smoking.jpg')",
+				csgo: "url('@/assets/images/csgo.jpeg')",
 			},
 			fontFamily: {
 				graduate: 'Graduate, cursive',

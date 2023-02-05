@@ -27,9 +27,12 @@ const tournaments = ref([
 
 <template>
 	<main class="container mx-auto p-4">
+		<div
+			class="fixed inset-0 -z-10 bg-csgo bg-cover bg-no-repeat after:absolute after:inset-0 after:z-0 after:bg-black/80"
+		></div>
 		<section>
 			<ul>
-				<li class="grid grid-cols-5 border-b border-b-zinc-700 p-6">
+				<li class="grid grid-cols-5 border-b border-b-zinc-800 p-6">
 					<h3 class="font-bold">Streamer</h3>
 					<h3 class="font-bold">Tournament</h3>
 					<h3 class="font-bold">Registered</h3>
@@ -39,7 +42,7 @@ const tournaments = ref([
 				<li v-for="tournament in tournaments" :key="tournament.id">
 					<router-link
 						:to="`/tournament/${tournament.id}`"
-						class="mt-4 grid grid-cols-5 rounded bg-zinc-700 p-6 transition-all duration-300 hover:bg-zinc-600 hover:shadow-lg"
+						class="mt-4 grid grid-cols-5 rounded bg-zinc-800 p-6 transition-all duration-300 hover:bg-zinc-700 hover:font-bold hover:shadow-lg"
 					>
 						<p class="font-bold">{{ tournament.streamer }}</p>
 						<p>{{ tournament.title }}</p>
