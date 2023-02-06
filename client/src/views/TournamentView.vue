@@ -41,6 +41,7 @@ const prices = ref([
 				<h3 class="text-center font-graduate text-5xl font-black uppercase tracking-wide">
 					{{ streamer.twitch_username }}
 				</h3>
+				<p class="mt-2 text-zinc-500">{{ tournament.title }} &bull; {{ tournament.live_at }}</p>
 			</div>
 
 			<nav class="flex flex-1 flex-wrap items-center justify-end gap-6 text-zinc-500">
@@ -49,7 +50,7 @@ const prices = ref([
 					class="font-graduate text-sm uppercase"
 					v-slot="{ isActive }"
 				>
-					<span :class="{ 'text-white': isActive }">General</span>
+					<span :class="{ 'text-base text-white': isActive }">General</span>
 				</router-link>
 				|
 				<router-link
@@ -57,7 +58,7 @@ const prices = ref([
 					class="font-graduate text-sm uppercase"
 					v-slot="{ isActive }"
 				>
-					<span :class="{ 'text-white': isActive }">Teams</span>
+					<span :class="{ 'text-base text-white': isActive }">Teams</span>
 				</router-link>
 				|
 				<router-link
@@ -65,7 +66,7 @@ const prices = ref([
 					class="font-graduate text-sm uppercase"
 					v-slot="{ isActive }"
 				>
-					<span :class="{ 'text-white': isActive }">Prices</span>
+					<span :class="{ 'text-base text-white': isActive }">Prices</span>
 				</router-link>
 				|
 				<router-link
@@ -73,7 +74,7 @@ const prices = ref([
 					class="font-graduate text-sm uppercase"
 					v-slot="{ isActive }"
 				>
-					<span :class="{ 'text-white': isActive }">Rules</span>
+					<span :class="{ 'text-base text-white': isActive }">Rules</span>
 				</router-link>
 				|
 				<router-link
@@ -81,7 +82,7 @@ const prices = ref([
 					class="font-graduate text-sm uppercase"
 					v-slot="{ isActive }"
 				>
-					<span :class="{ 'text-white': isActive }">Settings</span>
+					<span :class="{ 'text-base text-white': isActive }">Settings</span>
 				</router-link>
 			</nav>
 		</section>
