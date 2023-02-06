@@ -5,7 +5,8 @@
 @layer base {
 	body {
 		@apply overflow-x-hidden;
-		@apply bg-zinc-800 text-white antialiased;
+		@apply text-white antialiased;
+		@apply -z-20 bg-csgo bg-cover bg-no-repeat after:absolute after:inset-0 after:-z-10 after:bg-gradient-to-b after:from-black/80 after:to-black;
 	}
 }
 

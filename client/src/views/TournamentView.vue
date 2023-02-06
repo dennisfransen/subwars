@@ -38,9 +38,6 @@ const prices = ref([
 
 <template>
 	<main class="container mx-auto p-4 lg:grid lg:grid-cols-12">
-		<div
-			class="fixed inset-0 -z-10 bg-csgo bg-cover bg-no-repeat after:absolute after:inset-0 after:z-0 after:bg-gradient-to-b after:from-black/80 after:to-black"
-		></div>
 		<!-- Streamer -->
 		<!-- Casters -->
 		<!-- Sponsorer -->

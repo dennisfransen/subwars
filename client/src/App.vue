@@ -18,13 +18,11 @@
 
 .fade-enter-from,
 .fade-leave-to {
-	opacity: 0;
-	@apply translate-y-4;
+	@apply translate-y-4 opacity-0;
 }
 
 .fade-enter-to,
 .fade-leave-from {
-	opacity: 1;
-	@apply translate-y-0;
+	@apply translate-y-0 opacity-100;
 }
 </style>
