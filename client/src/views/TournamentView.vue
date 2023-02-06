@@ -15,7 +15,7 @@ const tournament = ref({
 const streamer = ref({
 	id: 1,
 	username: 'ProfessorGalen',
-	twitch_username: 'PG_CS',
+	twitch_username: 'meloncholy',
 })
 
 const casters = ref([
@@ -37,29 +37,42 @@ const prices = ref([
 </script>
 
 <template>
-	<main class="container mx-auto p-4 lg:grid lg:grid-cols-12">
-		<!-- Streamer -->
+	<main class="container mx-auto gap-x-10 py-10 px-4 lg:grid lg:grid-cols-12 lg:gap-y-16">
 		<!-- Casters -->
 		<!-- Sponsorer -->
-		<!-- Stream -->
-		<!-- Turneringsnamn -->
-
-		<!-- Turneringsinformation -->
-		<!-- Turneringsdatum -->
-		<!-- Antal Reggade -->
-		<!-- Antal platser -->
-		<!-- Antal Incheckade -->
 
 		<!-- Lag -->
 		<!-- Priser -->
 
-		<!-- Regga sig -->
-		<!-- Checka in -->
-		<!-- Lämna -->
+		<section class="col-span-12 grid grid-cols-3 items-center">
+			<nav class="flex items-center gap-6">
+				<router-link to="/" class="font-graduate font-semibold uppercase">/ General</router-link>
+				&bull;
+				<router-link to="/" class="font-graduate font-semibold uppercase">/ Teams</router-link>
+				&bull;
+				<router-link to="/" class="font-graduate font-semibold uppercase">/ Rules</router-link>
+			</nav>
+			<div>
+				<h3 class="text-center font-graduate text-6xl font-black uppercase tracking-wide">
+					{{ streamer.twitch_username }}
+				</h3>
+			</div>
+			<div class="flex items-center justify-end gap-6 font-graduate uppercase">
+				<p>{{ tournament.title }}</p>
+				&bull;
+				<p>{{ tournament.live_at }}</p>
+			</div>
+		</section>
 
 		<section class="col-span-9">
-			<p>Tournament page</p>
+			<iframe
+				src="https://player.twitch.tv/?channel=meloncholy&parent=subwars.se&muted=true"
+				class="aspect-video w-full"
+				allowfullscreen
+			>
+			</iframe>
 		</section>
+
 		<section class="col-span-3 flex flex-col gap-5 bg-black/80 p-6">
 			<div class="flex items-center justify-between border-b border-b-zinc-600 py-4 font-graduate">
 				<p class="uppercase tracking-wide text-zinc-600">Registered</p>
