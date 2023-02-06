@@ -38,7 +38,7 @@ const tournaments = ref([
 				</li>
 				<li v-for="tournament in tournaments" :key="tournament.id">
 					<router-link
-						:to="`/tournament/${tournament.id}`"
+						:to="`/tournament/${tournament.id}/general`"
 						class="first-of-type:border-t-1 grid grid-cols-5 border border-zinc-800 bg-black/80 p-6 transition-all duration-300 hover:bg-white hover:text-black hover:shadow"
 					>
 						<p class="font-bold">{{ tournament.streamer }}</p>

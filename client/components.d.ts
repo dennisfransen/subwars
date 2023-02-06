@@ -12,5 +12,6 @@ declare module '@vue/runtime-core' {
     BaseTextInput: typeof import('./src/components/base/BaseTextInput.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TournamentActions: typeof import('./src/components/tournament/TournamentActions.vue')['default']
   }
 }

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { CubeIcon, CubeTransparentIcon, ChevronDoubleDownIcon } from '@heroicons/vue/24/outline'
-
 const tournament = ref({
 	id: 1,
 	title: 'Fredagsrushen',
@@ -37,89 +35,65 @@ const prices = ref([
 </script>
 
 <template>
-	<router-view />
-
-	<main class="container mx-auto gap-x-10 py-10 px-4 lg:grid lg:grid-cols-12 lg:gap-y-16">
-		<!-- Casters -->
-		<!-- Sponsorer -->
-
-		<!-- Lag -->
-		<!-- Priser -->
-
-		<section class="col-span-12 grid grid-cols-3 items-center">
-			<nav class="flex items-center gap-6">
-				<router-link :to="`/tournament/${tournament.id}/general`" class="font-graduate font-semibold uppercase"
-					>/ General</router-link
-				>
-				&bull;
-				<router-link :to="`/tournament/${tournament.id}/teams`" class="font-graduate font-semibold uppercase"
-					>/ Teams</router-link
-				>
-				&bull;
-				<router-link :to="`/tournament/${tournament.id}/rules`" class="font-graduate font-semibold uppercase"
-					>/ Rules</router-link
-				>
-			</nav>
+	<main class="container mx-auto p-4">
+		<section class="flex items-start justify-between gap-4 pt-10 pb-14">
 			<div>
-				<h3 class="text-center font-graduate text-6xl font-black uppercase tracking-wide">
+				<h3 class="text-center font-graduate text-5xl font-black uppercase tracking-wide">
 					{{ streamer.twitch_username }}
 				</h3>
 			</div>
-			<div class="flex items-center justify-end gap-6 font-graduate uppercase">
-				<p>{{ tournament.title }}</p>
-				&bull;
-				<p>{{ tournament.live_at }}</p>
-			</div>
+
+			<nav class="flex flex-1 flex-wrap items-center justify-end gap-6 text-zinc-500">
+				<router-link
+					:to="{ name: 'tournament-general', params: { id: tournament.id } }"
+					class="font-graduate text-sm uppercase"
+					v-slot="{ isActive }"
+				>
+					<span :class="{ 'text-white': isActive }">General</span>
+				</router-link>
+				|
+				<router-link
+					:to="{ name: 'tournament-teams', params: { id: tournament.id } }"
+					class="font-graduate text-sm uppercase"
+					v-slot="{ isActive }"
+				>
+					<span :class="{ 'text-white': isActive }">Teams</span>
+				</router-link>
+				|
+				<router-link
+					:to="{ name: 'tournament-prices', params: { id: tournament.id } }"
+					class="font-graduate text-sm uppercase"
+					v-slot="{ isActive }"
+				>
+					<span :class="{ 'text-white': isActive }">Prices</span>
+				</router-link>
+				|
+				<router-link
+					:to="{ name: 'tournament-rules', params: { id: tournament.id } }"
+					class="font-graduate text-sm uppercase"
+					v-slot="{ isActive }"
+				>
+					<span :class="{ 'text-white': isActive }">Rules</span>
+				</router-link>
+				|
+				<router-link
+					:to="{ name: 'tournament-settings', params: { id: tournament.id } }"
+					class="font-graduate text-sm uppercase"
+					v-slot="{ isActive }"
+				>
+					<span :class="{ 'text-white': isActive }">Settings</span>
+				</router-link>
+			</nav>
 		</section>
 
-		<section class="col-span-9">
-			<iframe
-				src="https://player.twitch.tv/?channel=meloncholy&parent=subwars.se&muted=true"
-				class="aspect-video w-full"
-				allowfullscreen
-			>
-			</iframe>
-		</section>
-
-		<section class="col-span-3 flex flex-col gap-5 bg-black/80 p-6">
-			<div class="flex items-center justify-between border-b border-b-zinc-600 py-4 font-graduate">
-				<p class="uppercase tracking-wide text-zinc-600">Registered</p>
-				<p class="text-5xl font-black">{{ tournament.registered }}</p>
+		<div class="grid grid-cols-12 gap-10">
+			<div class="col-span-9">
+				<router-view />
 			</div>
 
-			<div class="flex items-center justify-between border-b border-b-zinc-600 py-4 font-graduate">
-				<p class="uppercase tracking-wide text-zinc-600">Checked In</p>
-				<p class="text-5xl font-black">{{ tournament.checkedIn }}</p>
+			<div class="col-span-3">
+				<TournamentActions :tournament="tournament" />
 			</div>
-
-			<div class="flex items-center justify-between border-b border-b-zinc-600 py-4 font-graduate">
-				<p class="uppercase tracking-wide text-zinc-600">Player slots</p>
-				<p class="text-5xl font-black">{{ tournament.teams * 5 }}</p>
-			</div>
-
-			<button
-				type="button"
-				class="border border-zinc-600 py-4 text-sm font-semibold uppercase transition-all duration-300 hover:bg-white hover:text-black hover:shadow"
-				title="Register to tournament"
-			>
-				Enlist to war
-			</button>
-
-			<button
-				type="button"
-				class="border border-zinc-600 py-4 text-sm font-semibold uppercase transition-all duration-300 hover:bg-white hover:text-black hover:shadow"
-				title="Check in"
-			>
-				Go to war
-			</button>
-
-			<button
-				type="button"
-				class="border border-zinc-600 py-4 text-sm font-semibold uppercase transition-all duration-300 hover:bg-white hover:text-black hover:shadow"
-				title="Leave tournament"
-			>
-				Abandon troups
-			</button>
-		</section>
+		</div>
 	</main>
 </template>

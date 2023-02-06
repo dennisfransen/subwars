@@ -1,5 +1,10 @@
 <template>
-	<main class="container mx-auto p-4">
-		<h1>This is an tournament general page</h1>
-	</main>
+	<section>
+		<iframe
+			src="https://player.twitch.tv/?channel=meloncholy&parent=subwars.se&muted=true"
+			class="aspect-video w-full"
+			allowfullscreen
+		>
+		</iframe>
+	</section>
 </template>
