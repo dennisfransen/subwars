@@ -37,6 +37,28 @@ const router = createRouter({
 			path: '/tournament/:id',
 			name: 'tournament',
 			component: () => import('@/views/TournamentView.vue'),
+			children: [
+				{
+					path: 'general',
+					name: 'tournament-general',
+					component: () => import('@/views/TournamentGeneralView.vue'),
+				},
+				{
+					path: 'teams',
+					name: 'tournament-teams',
+					component: () => import('@/views/TournamentTeamsView.vue'),
+				},
+				{
+					path: 'rules',
+					name: 'tournament-rules',
+					component: () => import('@/views/TournamentRulesView.vue'),
+				},
+				{
+					path: 'settings',
+					name: 'tournament-settings',
+					component: () => import('@/views/TournamentSettingsView.vue'),
+				},
+			],
 		},
 		{
 			path: '/:pathMatch(.*)*',

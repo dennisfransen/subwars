@@ -37,6 +37,8 @@ const prices = ref([
 </script>
 
 <template>
+	<router-view />
+
 	<main class="container mx-auto gap-x-10 py-10 px-4 lg:grid lg:grid-cols-12 lg:gap-y-16">
 		<!-- Casters -->
 		<!-- Sponsorer -->
@@ -46,11 +48,17 @@ const prices = ref([
 
 		<section class="col-span-12 grid grid-cols-3 items-center">
 			<nav class="flex items-center gap-6">
-				<router-link to="/" class="font-graduate font-semibold uppercase">/ General</router-link>
+				<router-link :to="`/tournament/${tournament.id}/general`" class="font-graduate font-semibold uppercase"
+					>/ General</router-link
+				>
 				&bull;
-				<router-link to="/" class="font-graduate font-semibold uppercase">/ Teams</router-link>
+				<router-link :to="`/tournament/${tournament.id}/teams`" class="font-graduate font-semibold uppercase"
+					>/ Teams</router-link
+				>
 				&bull;
-				<router-link to="/" class="font-graduate font-semibold uppercase">/ Rules</router-link>
+				<router-link :to="`/tournament/${tournament.id}/rules`" class="font-graduate font-semibold uppercase"
+					>/ Rules</router-link
+				>
 			</nav>
 			<div>
 				<h3 class="text-center font-graduate text-6xl font-black uppercase tracking-wide">
