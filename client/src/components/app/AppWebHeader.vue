@@ -6,59 +6,31 @@
 					<router-link :to="{ name: 'home' }">Subwars</router-link>
 				</h1>
 
-				<nav class="flex items-center gap-10">
-					<div class="relative">
-						<router-link :to="{ name: 'home' }" class="text-sm text-zinc-500" v-slot="{ isActive }">
-							<span
-								class="after:absolute after:-bottom-5 after:left-0 after:right-0 after:h-[2px] after:bg-zinc-500 after:opacity-0 after:transition-all after:duration-500"
-								:class="{ 'text-white after:opacity-100': isActive }"
-							>
-								Home
-							</span>
-						</router-link>
-					</div>
+				<nav class="space-x-10">
+					<router-link :to="{ name: 'home' }" class="text-sm text-zinc-500" v-slot="{ isActive }">
+						<span :class="{ 'text-white': isActive }">Home</span>
+					</router-link>
 
-					<div class="relative">
-						<router-link :to="{ name: 'tournaments' }" class="text-sm text-zinc-500" v-slot="{ isActive }">
-							<span
-								class="after:absolute after:-bottom-5 after:left-0 after:right-0 after:h-[2px] after:bg-zinc-500 after:opacity-0 after:transition-all after:duration-500"
-								:class="{ 'text-white after:opacity-100': isActive }"
-							>
-								Tournaments
-							</span>
-						</router-link>
-					</div>
+					<router-link :to="{ name: 'tournaments' }" class="text-sm text-zinc-500" v-slot="{ isActive }">
+						<span :class="{ 'text-white': isActive }">Tournaments</span>
+					</router-link>
 
-					<div class="relative">
-						<router-link :to="{ name: 'streamer' }" class="text-sm text-zinc-500" v-slot="{ isActive }">
-							<span
-								class="after:absolute after:-bottom-5 after:left-0 after:right-0 after:h-[2px] after:bg-zinc-500 after:opacity-0 after:transition-all after:duration-500"
-								:class="{ 'text-white after:opacity-100': isActive }"
-							>
-								Streamer
-							</span>
-						</router-link>
-					</div>
+					<router-link :to="{ name: 'streamer' }" class="text-sm text-zinc-500" v-slot="{ isActive }">
+						<span :class="{ 'text-white': isActive }">Streamer</span>
+					</router-link>
 
-					<div class="relative">
-						<router-link :to="{ name: 'about' }" class="text-sm text-zinc-500" v-slot="{ isActive }">
-							<span
-								class="after:absolute after:-bottom-5 after:left-0 after:right-0 after:h-[2px] after:bg-zinc-500 after:opacity-0 after:transition-all after:duration-500"
-								:class="{ 'text-white after:opacity-100': isActive }"
-							>
-								About
-							</span>
-						</router-link>
-					</div>
+					<router-link :to="{ name: 'about' }" class="text-sm text-zinc-500" v-slot="{ isActive }">
+						<span :class="{ 'text-white': isActive }">About</span>
+					</router-link>
 				</nav>
 			</div>
 
-			<div>
+			<div class="relative overflow-hidden">
 				<router-link
 					to="/login"
-					class="rounded bg-gray-700 px-5 py-2 text-sm font-medium transition-all duration-300 hover:bg-gray-600 hover:shadow"
+					class="block rounded-sm bg-white px-5 py-2 text-sm font-semibold text-black transition-colors duration-300 after:absolute after:inset-0 after:-translate-x-full after:rounded-sm after:bg-purple-500 after:transition-all after:duration-300 hover:text-white hover:after:translate-x-0"
 				>
-					Login
+					<span class="relative z-50">Login with Steam</span>
 				</router-link>
 			</div>
 		</div>
