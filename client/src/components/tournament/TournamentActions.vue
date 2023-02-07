@@ -26,7 +26,7 @@ defineProps({
 			</div>
 		</div>
 
-		<div class="mt-5 flex flex-col gap-y-5 bg-black/60 p-6">
+		<div class="mt-5 flex flex-col gap-y-5">
 			<button
 				type="button"
 				class="rounded-sm border border-zinc-600 py-4 text-sm font-semibold uppercase transition-all duration-300 hover:bg-white hover:text-black hover:shadow"

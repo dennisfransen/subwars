@@ -10,6 +10,9 @@ module.exports = {
 				smoking: "url('@/assets/images/smoking.jpg')",
 				csgo: "url('@/assets/images/csgo.jpeg')",
 
+				'smoking-min': "url('@/assets/images/smoking-min.jpg')",
+				'csgo-min': "url('@/assets/images/csgo-min.jpeg')",
+
 				't-red': "url('@/assets/images/t-red.jpg')",
 				't-green': "url('@/assets/images/t-green.jpg')",
 				'ct-green': "url('@/assets/images/ct-green.jpg')",
