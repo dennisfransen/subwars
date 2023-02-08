@@ -8,6 +8,7 @@ const tournament = ref({
 	follower: true,
 	subscriber: true,
 	live_at: '2023-04-01',
+	is_live: true,
 })
 
 const streamer = ref({
@@ -41,7 +42,13 @@ const prices = ref([
 				<h3 class="text-center font-graduate text-5xl font-black uppercase tracking-wide">
 					{{ streamer.twitch_username }}
 				</h3>
-				<p class="mt-2 text-zinc-500">{{ tournament.title }} &bull; {{ tournament.live_at }}</p>
+				<div class="mt-2 flex items-center gap-2">
+					<span
+						v-if="tournament.is_live"
+						class="relative inline-block h-4 w-4 rounded-full bg-purple-500/50 after:absolute after:left-1/2 after:top-1/2 after:-translate-y-1/2 after:-translate-x-1/2 after:rounded-full after:bg-purple-500 after:p-1"
+					></span>
+					<p class="text-zinc-500">{{ tournament.title }} &bull; {{ tournament.live_at }}</p>
+				</div>
 			</div>
 
 			<nav class="flex flex-1 flex-wrap items-center justify-end gap-6 text-zinc-500">

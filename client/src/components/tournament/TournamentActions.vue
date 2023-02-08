@@ -9,7 +9,7 @@ defineProps({
 
 <template>
 	<div class="sticky right-0 top-8">
-		<div class="flex flex-col gap-y-5 bg-black/60 p-6">
+		<div class="flex flex-col gap-y-5 rounded-sm bg-black/60 p-6">
 			<div class="flex items-center justify-between rounded-sm border-b border-b-zinc-800 py-4 font-graduate">
 				<p class="uppercase tracking-wide text-zinc-500">Registered</p>
 				<p class="text-4xl font-black">{{ tournament.registered }}</p>
