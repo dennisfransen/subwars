@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ClockIcon, UserIcon, ChevronRightIcon, SignalIcon } from '@heroicons/vue/24/outline'
+import { ClockIcon, UserIcon, ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 import { PlayIcon } from '@heroicons/vue/24/solid'
 
 const tournaments = ref([
@@ -43,7 +43,7 @@ const tournaments = ref([
 					</tr>
 				</thead>
 				<tbody>
-					<tr v-for="(tournament, i) in tournaments" :key="tournament.id">
+					<tr v-for="(tournament, i) in tournaments" :key="tournament.id" class="border-b border-zinc-800">
 						<td>
 							<p class="px-4 py-5 text-white">
 								{{ i + 1 }}
@@ -70,6 +70,7 @@ const tournaments = ref([
 									<path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z" />
 								</svg>
 								{{ tournament.streamer }}
+								<ArrowTopRightOnSquareIcon class="-ml-1 mb-1 h-3 w-3 text-zinc-500" />
 							</a>
 						</td>
 						<td>
