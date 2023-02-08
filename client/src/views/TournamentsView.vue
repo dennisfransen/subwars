@@ -92,7 +92,7 @@ const tournaments = ref([
 						<td v-if="tournament.is_live">
 							<div>
 								<router-link
-									:to="{ name: 'tournament-general', params: { id: tournament.id } }"
+									:to="{ name: 'tournament-stream', params: { id: tournament.id } }"
 									class="flex items-center gap-2 px-4 py-5 font-bold text-white"
 								>
 									<span
@@ -105,7 +105,7 @@ const tournaments = ref([
 						<td v-else>
 							<div>
 								<router-link
-									:to="{ name: 'tournament-general', params: { id: tournament.id } }"
+									:to="{ name: 'tournament-stream', params: { id: tournament.id } }"
 									class="flex items-center gap-2 px-4 py-5 font-bold text-white"
 								>
 									Register

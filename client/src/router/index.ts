@@ -39,9 +39,9 @@ const router = createRouter({
 			component: () => import('@/views/TournamentView.vue'),
 			children: [
 				{
-					path: 'general',
-					name: 'tournament-general',
-					component: () => import('@/views/TournamentGeneralView.vue'),
+					path: 'stream',
+					name: 'tournament-stream',
+					component: () => import('@/views/TournamentStreamView.vue'),
 				},
 				{
 					path: 'teams',

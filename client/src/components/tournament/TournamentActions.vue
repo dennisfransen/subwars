@@ -26,13 +26,13 @@ defineProps({
 			</div>
 		</div>
 
-		<div class="mt-5 flex flex-col gap-y-5">
+		<div class="mt-16 flex flex-col gap-y-5">
 			<button
 				type="button"
 				class="rounded-sm border border-zinc-600 py-4 text-sm font-semibold uppercase transition-all duration-300 hover:bg-white hover:text-black hover:shadow"
 				title="Register to tournament"
 			>
-				Enlist to subwar
+				Register to subwar
 			</button>
 
 			<button
@@ -40,7 +40,7 @@ defineProps({
 				class="rounded-sm border border-zinc-600 py-4 text-sm font-semibold uppercase transition-all duration-300 hover:bg-white hover:text-black hover:shadow"
 				title="Check in"
 			>
-				Go to subwar
+				Ready up!
 			</button>
 
 			<button

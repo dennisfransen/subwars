@@ -53,11 +53,11 @@ const prices = ref([
 
 			<nav class="flex flex-1 flex-wrap items-center justify-end gap-6 text-zinc-500">
 				<router-link
-					:to="{ name: 'tournament-general', params: { id: tournament.id } }"
+					:to="{ name: 'tournament-stream', params: { id: tournament.id } }"
 					class="font-graduate text-sm uppercase"
 					v-slot="{ isActive }"
 				>
-					<span :class="{ 'text-base text-white': isActive }">General</span>
+					<span :class="{ 'text-base text-white': isActive }">Stream</span>
 				</router-link>
 				|
 				<router-link
