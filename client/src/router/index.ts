@@ -35,33 +35,85 @@ const router = createRouter({
 		},
 		{
 			path: '/tournament/:id',
-			name: 'tournament',
-			component: () => import('@/views/TournamentView.vue'),
+			component: () => import('@/components/layouts/TournamentLayout.vue'),
 			children: [
 				{
 					path: 'stream',
 					name: 'tournament-stream',
-					component: () => import('@/views/TournamentStreamView.vue'),
+					components: {
+						default: () => import('@/components/tournament/TournamentNavigation.vue'),
+						'tournament-base': () => import('@/views/tournament-base/TournamentStreamView.vue'),
+					},
 				},
 				{
 					path: 'teams',
 					name: 'tournament-teams',
-					component: () => import('@/views/TournamentTeamsView.vue'),
+					components: {
+						default: () => import('@/components/tournament/TournamentNavigation.vue'),
+						'tournament-base': () => import('@/views/tournament-base/TournamentTeamsView.vue'),
+					},
 				},
 				{
 					path: 'prices',
 					name: 'tournament-prices',
-					component: () => import('@/views/TournamentPricesView.vue'),
+					components: {
+						default: () => import('@/components/tournament/TournamentNavigation.vue'),
+						'tournament-base': () => import('@/views/tournament-base/TournamentPricesView.vue'),
+					},
 				},
 				{
 					path: 'rules',
 					name: 'tournament-rules',
-					component: () => import('@/views/TournamentRulesView.vue'),
+					components: {
+						default: () => import('@/components/tournament/TournamentNavigation.vue'),
+						'tournament-base': () => import('@/views/tournament-base/TournamentRulesView.vue'),
+					},
 				},
 				{
 					path: 'settings',
-					name: 'tournament-settings',
-					component: () => import('@/views/TournamentSettingsView.vue'),
+					component: () => import('@/components/tournament/TournamentNavigation.vue'),
+					children: [
+						{
+							path: 'general',
+							name: 'tournament-settings-general',
+							components: {
+								default: () => import('@/components/tournament/TournamentNavigation.vue'),
+								'tournament-settings': () => import('@/views/tournament-settings/TournamentSettingsGeneralView.vue'),
+							},
+						},
+						{
+							path: 'teams',
+							name: 'tournament-settings-teams',
+							components: {
+								default: () => import('@/components/tournament/TournamentNavigation.vue'),
+								'tournament-settings': () => import('@/views/tournament-settings/TournamentSettingsTeamsView.vue'),
+							},
+						},
+						{
+							path: 'prices',
+							name: 'tournament-settings-prices',
+							components: {
+								default: () => import('@/components/tournament/TournamentNavigation.vue'),
+								'tournament-settings': () => import('@/views/tournament-settings/TournamentSettingsPricesView.vue'),
+							},
+						},
+						{
+							path: 'casters',
+							name: 'tournament-settings-casters',
+							components: {
+								default: () => import('@/components/tournament/TournamentNavigation.vue'),
+								'tournament-settings': () => import('@/views/tournament-settings/TournamentSettingsCastersView.vue'),
+							},
+						},
+						{
+							path: 'sponsors',
+							name: 'tournament-settings-sponsors',
+							components: {
+								default: () => import('@/components/tournament/TournamentNavigation.vue'),
+								'tournament-settings': () => import('@/views/tournament-settings/TournamentSettingsSponsorsView.vue'),
+							},
+						},
+					],
 				},
 			],
 		},

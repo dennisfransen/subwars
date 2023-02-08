@@ -1,9 +1,14 @@
 <script setup lang="ts">
-defineProps({
-	tournament: {
-		type: Object,
-		required: true,
-	},
+const tournament = ref({
+	id: 1,
+	title: 'Fredagsrushen',
+	registered: 10,
+	teams: 8,
+	checkedIn: 8,
+	follower: true,
+	subscriber: true,
+	live_at: '2023-04-01',
+	is_live: true,
 })
 </script>
 

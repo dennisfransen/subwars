@@ -13,5 +13,10 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TournamentActions: typeof import('./src/components/tournament/TournamentActions.vue')['default']
+    TournamentBaseLayout: typeof import('./src/components/layouts/TournamentBaseLayout.vue')['default']
+    TournamentLayout: typeof import('./src/components/layouts/TournamentLayout.vue')['default']
+    TournamentNavigation: typeof import('./src/components/tournament/TournamentNavigation.vue')['default']
+    TournamentSettingsLayout: typeof import('./src/components/layouts/TournamentSettingsLayout.vue')['default']
+    WhatComponent: typeof import('./src/components/layouts/WhatComponent.vue')['default']
   }
 }
